@@ -6,10 +6,11 @@ import {
   signInWithEmailAndPassword,
   updateProfile,
 } from "firebase/auth";
-import { auth } from "../utlis/firebase";
-import { useNavigate } from "react-router-dom";
+import { auth } from "../utlis/firebase"; 
 import { useDispatch } from "react-redux";
 import { addUser } from "../utlis/userSlice";
+import { AVTAR_LOGO } from "../utlis/contant";
+import { USER_AVTAR } from "../utlis/contant";
 
 const LogIn = () => {
   const name = useRef(null);
@@ -17,8 +18,7 @@ const LogIn = () => {
   const password = useRef(null);
 
   const [errorMessage, setErrorMessage] = useState(null);
-  const [isSignInForm, setIsSignInForm] = useState(true);
-  const navigate = useNavigate();
+  const [isSignInForm, setIsSignInForm] = useState(true); 
   const dispatch = useDispatch();
 
   const handleButtonClick = () => {
@@ -44,8 +44,7 @@ const LogIn = () => {
 
           updateProfile(user, {
             displayName: "name.current.value",
-            photoURL:
-              "https://avatars.githubusercontent.com/u/154122227?s=96&v=4",
+            photoURL: USER_AVTAR
           })
             .then(() => {
               const { uid, email, displayName, photoURL } = auth.currentUser;
@@ -56,8 +55,7 @@ const LogIn = () => {
                   displayName: displayName,
                   photoURL: photoURL,
                 })
-              );
-              navigate("/browse");
+              ); 
             })
             .catch((error) => {
               setErrorMessage(error.message);
@@ -79,9 +77,7 @@ const LogIn = () => {
       )
         .then((userCredential) => {
           // Signed in
-          const user = userCredential.user;
-          console.log(user);
-          navigate("/browse");
+          const user = userCredential.user; 
 
           // ...
         })
@@ -102,9 +98,7 @@ const LogIn = () => {
       <Header />
       <div className="absolute">
         <img
-          src="
-        https://assets.nflxext.com/ffe/siteui/vlv3/2e07bc25-8b8f-4531-8e1f-7e5e33938793/e4b3c14a-684b-4fc4-b14f-2b486a4e9f4e/IN-en-20240219-popsignuptwoweeks-perspective_alpha_website_large.jpg"
-          alt="Logo"
+          src={AVTAR_LOGO}   alt="Logo"
         />
       </div>
 
