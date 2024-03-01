@@ -28,6 +28,16 @@
 -Update Store with Trailer Video 
 -Embedded the YouTube video and make it autoPlay and mute
 -tailwind classes to make main Container look awesome
+-build Secondary component
+-build Movie List 
+-build movie card
+-TMDB Image CDN_URL
+-made browse page amazing using tailwind
+-usePopularMovie custom hook
+-making Gpt-Search bar by clicking gone to search bar page
+-in search bar page we have features of searching and after search  showing results movies
+-in search bar we have created multi-language button to select as convinece (good experience in creating)
+-integrate gptSearchMovies
 
 
 

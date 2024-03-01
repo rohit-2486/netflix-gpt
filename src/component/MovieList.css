@@ -1,0 +1,19 @@
+/* MovieList.css */
+.scrollbar {
+    scrollbar-width: thin; /* "auto" or "thin" depending on browser support */
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.1); /* Change scrollbar color */
+  }
+  
+  .scrollbar::-webkit-scrollbar {
+    width: 8px; /* Width of scrollbar */
+  }
+  
+  .scrollbar::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1); /* Background color of scrollbar track */
+  }
+  
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5); /* Color of scrollbar thumb */
+    border-radius: 10px; /* Border radius of scrollbar thumb */
+  }
+  

@@ -14,4 +14,9 @@ export const API_OPTION = {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIyOThlYjNkOWFmNDYwN2Y3MzYxOWU2MjM2NDEyYTU1NyIsInN1YiI6IjY1ZGYzZjRkOTYzODY0MDE4NWQ4YmEyOSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.eiQ1y6UEQgkjQe1T2zUEa2HI4xA2ljLsMMfAH6J1nJg'
     }
   };
+
+  export const CDN_URL = "https://image.tmdb.org/t/p/w780"
+
+  export const SUPPORTED_LANGUAGES = [{identifier:"en" , name: "English"},
+  {identifier:"hindi" , name: "Hindi"},{identifier:"spanish" , name: "Spanish"},]
   
