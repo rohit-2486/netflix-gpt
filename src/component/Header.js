@@ -50,10 +50,10 @@ const Header = () => {
   }
 
   return (
-    <div className="absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex  justify-between">
-      <img className="w-44  " src={LOGO} alt="Logo" />
+    <div className="absolute w-screen px-8 md:py-2 bg-gradient-to-b from-black z-10 flex flex-col md:flex-row justify-between ">
+      <img className="w-44  mx-auto md:mx-0 " src={LOGO} alt="Logo" />
       {user && (
-        <div className="flex p-2">
+        <div className="flex  justify-between ">
          { showGptSearchView && ( <select className="p-2 m-2 rounded-md bg-gray-900 text-white" onChange={handleLanguageChange}>
             {SUPPORTED_LANGUAGES.map((lang) => (
               <option key={lang.identifier} value={lang.identifier}>
@@ -63,19 +63,19 @@ const Header = () => {
           </select>)}
           <button
             onClick={handleGptSearch}
-            className=" py-2 px-4 mx-4 my-2  bg-purple-500  text-white  rounded-lg"
+            className="  m-2 w-48 h-10 md:py-2 md:px-4 md:mx-4 md:my-2 bg-purple-500  text-white  rounded-lg"
           >
              {showGptSearchView ? "Home Page" :" GPT Search"}
           </button>
           <img
             alt="userIcon"
-            className="w-12 h-12  "
+            className="hidden md:block w-10 h-10  "
             src={user?.photoURL}
           />
 
           <button
             onClick={handleSignOut}
-            className="py-2 px-4 mx-4 my-2 bg-purple-500  text-white  rounded-lg"
+            className="  m-2 w-36 h-10 md:py-2 md:px-4 md:mx-4 md:my-2 bg-purple-500  text-white  rounded-lg"
           >
             sign out
           </button>

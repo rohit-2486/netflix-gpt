@@ -5,12 +5,12 @@ import { AVTAR_LOGO } from "../utlis/contant";
 const GptSearch = () => {
     return (
       <>
-        <div className="absolute -z-20">
-        <img
+        <div className="fixed -z-10">
+        <img className="h-screen object-cover md:h-auto "
           src={AVTAR_LOGO}   alt="Logo"
         />
       </div>
-        <div className="">
+        <div className=" ">
           <GptSearchBar />  
            <GptMovieSuggestion />
         </div>

@@ -94,10 +94,10 @@ const LogIn = () => {
   };
 
   return (
-    <div className="">
+    <div  >
       <Header />
       <div className="absolute">
-        <img
+        <img className="h-screen object-cover md:h-auto  "
           src={AVTAR_LOGO}   alt="Logo"
         />
       </div>
@@ -105,9 +105,9 @@ const LogIn = () => {
       <div>
         <form
           onSubmit={(e) => e.preventDefault()}
-          className="absolute bg-black my-24 mx-auto right-0 left-0 p-12 bg-opacity-70 w-3/12 text-white  rounded-lg "
+          className="absolute bg-black my-36 mx-auto right-0 left-0 p-4 md:p-12 bg-opacity-70 w-9/12 md:w-3/12 text-white  rounded-lg "
         >
-          <h1 className="font-bold text-3xl py-4">
+          <h1 className="font-bold text-xl md:text-3xl  py-1 md:py-4">
             {isSignInForm ? "Sign In" : "Sign up"}
           </h1>
 
@@ -116,7 +116,7 @@ const LogIn = () => {
               ref={name}
               type="text"
               placeholder="Name"
-              className="my-4 p-4 w-full bg-black bg-opacity-70 border border-white rounded-lg"
+              className=" md:my-4 p-4 w-full bg-black bg-opacity-70 border border-white rounded-lg"
             />
           )}
 
@@ -124,32 +124,32 @@ const LogIn = () => {
             ref={email}
             type="text"
             placeholder="Email Adress"
-            className="my-4 p-4 w-full bg-black bg-opacity-70 border border-white rounded-lg"
+            className="my-2 md:my-4 p-4 w-full bg-black bg-opacity-70 border border-white rounded-lg"
           />
           <input
             ref={password}
             type="password"
             placeholder="Password"
-            className="my-4 p-4 w-full  bg-black bg-opacity-70 border border-white rounded-lg"
+            className="md:my-4 p-4 w-full  bg-black bg-opacity-70 border border-white rounded-lg"
           />
 
           {!isSignInForm && (
             <input
               type="password"
               placeholder="confirm password"
-              className="my-4 p-4 w-full bg-black bg-opacity-70 border border-white rounded-lg"
+              className="my-2 md:my-4 p-4 w-full bg-black bg-opacity-70 border border-white rounded-lg"
             />
           )}
 
           <p className="text-red-600 font-bold text-xl py-2">{errorMessage}</p>
 
           <button
-            className="my-6 p-1 w-full bg-red-700 rounded-lg"
+            className=" md:my-6 p-1 w-full bg-red-700 rounded-lg"
             onClick={handleButtonClick}
           >
             {isSignInForm ? "Sign In" : "Sign up"}
           </button>
-          <p className="p-5 cursor-pointer" onClick={toggleSignInForm}>
+          <p className="p-4 cursor-pointer" onClick={toggleSignInForm}>
             {isSignInForm
               ? "New to Netflix? Sign Up Now."
               : "Already register? Sign In Now"}

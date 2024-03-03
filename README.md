@@ -38,7 +38,15 @@
 -in search bar page we have features of searching and after search  showing results movies
 -in search bar we have created multi-language button to select as convinece (good experience in creating)
 -integrate gptSearchMovies
-
+-gpt search Movies in amazing if we give command likewise command it gives  us result accordingly
+-fetch the openai gpt api 
+-fetch gptMovies suggestion from TNDB
+-memoization 
+-the ui is updated after search of gpt search with help of created Redux store and having serval slices
+-most  important feature is that when we click any movie it display  trailer of that particular movie
+- this is done by creating Redux store  and using useSelector to fetch the id of clicked movie and then using this id we are getting movie in ui
+-ADDING .env files
+-makes website responsive for phone and desktop
 
 
 # features
